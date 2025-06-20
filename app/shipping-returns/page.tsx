@@ -1,11 +1,11 @@
-import type { Metadata" from "next"
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Truck, RotateCcw, Shield, Clock } from 'lucide-react'
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "Shipping & Returns - Lorna Glow",
-  description: "Learn about our shipping and returns policy for South Africa. Free shipping on orders over R750.",
+  description: "Learn about our shipping and returns policy for South Africa. Free shipping on orders over R1000.",
 }
 
 export default function ShippingReturnsPage() {
@@ -40,17 +40,16 @@ export default function ShippingReturnsPage() {
                     <li>Bloemfontein & Free State</li>
                     <li>All other provinces</li>
                   </ul>
+                  <p className="mt-2 text-red-600 font-semibold">Note: We currently only ship within South Africa.</p>
                 </div>
 
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Shipping Costs</h3>
                   <ul className="text-gray-700 space-y-1">
                     <li>
-                      • <strong>FREE shipping</strong> on orders over R750
+                      • <strong>FREE shipping</strong> on orders over R1000
                     </li>
-                    <li>• Standard delivery: R99 (3-5 business days)</li>
-                    <li>• Express delivery: R149 (1-2 business days)</li>
-                    <li>• Remote areas: Additional R50</li>
+                    <li>• Standard delivery: R120 (3-5 business days)</li>
                   </ul>
                 </div>
               </div>
