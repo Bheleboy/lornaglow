@@ -105,7 +105,7 @@ export default function ProductShowcase() {
                     className="w-full bg-amber-600 hover:bg-amber-700 text-white py-3"
                   />
                 </div>
-                <p className="text-sm text-gray-500 text-center mt-2">Free shipping on orders over R750</p>
+                <p className="text-sm text-gray-500 text-center mt-2">Free shipping on orders over R1000</p>
               </CardContent>
             </Card>
           </div>
