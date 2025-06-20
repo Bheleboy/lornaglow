@@ -215,7 +215,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                     </Button>
                   </div>
 
-                  <p className="text-sm text-gray-500 text-center">Free shipping on orders over R750</p>
+                  <p className="text-sm text-gray-500 text-center">Free shipping on orders over R1000</p>
                 </div>
               </CardContent>
             </Card>
