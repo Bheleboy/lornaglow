@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export default function Hero() {
@@ -25,11 +26,11 @@ export default function Hero() {
               nails, hair, bones and connective tissue.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3">
-                Shop Now - $49.99
+              <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 text-lg" asChild>
+                <Link href="/shop">Shop Now - From R449</Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-white text-gray-700 border-gray-300 px-8 py-3">
-                Learn More
+              <Button size="lg" variant="outline" className="bg-white text-gray-700 border-gray-300 px-8 py-3" asChild>
+                <Link href="#about">Learn More</Link>
               </Button>
             </div>
           </div>

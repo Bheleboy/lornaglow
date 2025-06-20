@@ -1,8 +1,9 @@
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star, Shield, Award } from "lucide-react"
+import PayFastButton from "@/components/payfast/payfast-button"
 
 export default function ProductShowcase() {
   return (
@@ -86,11 +87,25 @@ export default function ProductShowcase() {
             <Card className="border-amber-200">
               <CardContent className="p-6">
                 <div className="flex justify-between items-center mb-4">
-                  <span className="text-2xl font-bold text-gray-900">$49.99</span>
+                  <span className="text-2xl font-bold text-gray-900">R499</span>
                   <span className="text-sm text-gray-500">250ml jar</span>
                 </div>
-                <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white py-3">Add to Cart</Button>
-                <p className="text-sm text-gray-500 text-center mt-2">Free shipping on orders over $75</p>
+                <div className="space-y-3">
+                  <Link
+                    href="/shop/product/1"
+                    className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-900 py-3 px-4 rounded-md text-center font-medium transition-colors"
+                  >
+                    View Product Details
+                  </Link>
+                  <PayFastButton
+                    amount={499}
+                    itemName="Premium Collagen Peptides - 250ml"
+                    itemDescription="Pure Type I & Type III collagen peptides in premium glass jar"
+                    customStr1="product_id:1"
+                    className="w-full bg-amber-600 hover:bg-amber-700 text-white py-3"
+                  />
+                </div>
+                <p className="text-sm text-gray-500 text-center mt-2">Free shipping on orders over R750</p>
               </CardContent>
             </Card>
           </div>

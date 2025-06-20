@@ -27,18 +27,18 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="#product" className="text-gray-700 hover:text-amber-600 transition-colors">
-              Product
+            <Link href="/shop" className="text-gray-700 hover:text-amber-600 transition-colors">
+              Shop
             </Link>
-            <Link href="#benefits" className="text-gray-700 hover:text-amber-600 transition-colors">
+            <a href="#benefits" className="text-gray-700 hover:text-amber-600 transition-colors">
               Benefits
-            </Link>
-            <Link href="#about" className="text-gray-700 hover:text-amber-600 transition-colors">
+            </a>
+            <a href="#about" className="text-gray-700 hover:text-amber-600 transition-colors">
               About
-            </Link>
-            <Link href="#contact" className="text-gray-700 hover:text-amber-600 transition-colors">
+            </a>
+            <a href="#contact" className="text-gray-700 hover:text-amber-600 transition-colors">
               Contact
-            </Link>
+            </a>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -46,7 +46,9 @@ export default function Header() {
               <ShoppingBag className="w-4 h-4 mr-2" />
               Cart (0)
             </Button>
-            <Button className="bg-amber-600 hover:bg-amber-700 text-white">Shop Now</Button>
+            <Button className="bg-amber-600 hover:bg-amber-700 text-white" asChild>
+              <Link href="/shop">Shop Now</Link>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -62,39 +64,41 @@ export default function Header() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               <Link
-                href="#product"
+                href="/shop"
                 className="block px-3 py-2 text-gray-700 hover:text-amber-600"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Product
+                Shop
               </Link>
-              <Link
+              <a
                 href="#benefits"
                 className="block px-3 py-2 text-gray-700 hover:text-amber-600"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Benefits
-              </Link>
-              <Link
+              </a>
+              <a
                 href="#about"
                 className="block px-3 py-2 text-gray-700 hover:text-amber-600"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
-              </Link>
-              <Link
+              </a>
+              <a
                 href="#contact"
                 className="block px-3 py-2 text-gray-700 hover:text-amber-600"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </Link>
+              </a>
               <div className="px-3 py-2 space-y-2">
                 <Button variant="outline" size="sm" className="w-full bg-white text-gray-700 border-gray-300">
                   <ShoppingBag className="w-4 h-4 mr-2" />
                   Cart (0)
                 </Button>
-                <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white">Shop Now</Button>
+                <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white" asChild>
+                  <Link href="/shop">Shop Now</Link>
+                </Button>
               </div>
             </div>
           </div>

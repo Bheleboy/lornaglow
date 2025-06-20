@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Instagram, Phone, Mail } from "lucide-react"
+import { Instagram, Phone, Mail, Facebook } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -24,9 +24,19 @@ export default function Footer() {
             <div className="flex space-x-4">
               <Link
                 href="https://instagram.com/lornaglowcollagen"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-300 hover:text-amber-400 transition-colors"
               >
                 <Instagram className="w-6 h-6" />
+              </Link>
+              <Link
+                href="https://facebook.com/lornaglowcollagen"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-amber-400 transition-colors"
+              >
+                <Facebook className="w-6 h-6" />
               </Link>
             </div>
           </div>
@@ -35,8 +45,8 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#product" className="text-gray-300 hover:text-amber-400 transition-colors">
-                  Product
+                <Link href="/shop" className="text-gray-300 hover:text-amber-400 transition-colors">
+                  Shop
                 </Link>
               </li>
               <li>
@@ -69,6 +79,10 @@ export default function Footer() {
                 <span className="text-gray-300">@lornaglowcollagen</span>
               </div>
               <div className="flex items-center gap-3">
+                <Facebook className="w-5 h-5 text-amber-400" />
+                <span className="text-gray-300">@lornaglowcollagen</span>
+              </div>
+              <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-amber-400" />
                 <span className="text-gray-300">info@lornaglow.com</span>
               </div>
@@ -80,14 +94,14 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">© 2024 Lorna Glow. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-amber-400 text-sm transition-colors">
+              <Link href="/privacy-policy" className="text-gray-400 hover:text-amber-400 text-sm transition-colors">
                 Privacy Policy
               </Link>
               <Link href="/terms" className="text-gray-400 hover:text-amber-400 text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/shipping" className="text-gray-400 hover:text-amber-400 text-sm transition-colors">
-                Shipping Info
+              <Link href="/shipping-returns" className="text-gray-400 hover:text-amber-400 text-sm transition-colors">
+                Shipping & Returns
               </Link>
             </div>
           </div>
